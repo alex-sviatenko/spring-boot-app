@@ -1,19 +1,22 @@
 name: Check
 on: [push]
 jobs:
-  download-project:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Maven
-        uses: yuzhiyongcn/setup-maven@v1.0.0
-        with:
-          maven-version: 3.8.2
-      - name: Check Maven wrapper version
+#      - name: Set up Maven
+#        uses: yuzhiyongcn/setup-maven@v1.0.0
+#        with:
+#          maven-version: 3.8.2
+      - name: Check Maven version
         run: mvn -v
-      - name: Install Java
+      - run: echo "Check dir"
+      - run: pwd
+      - run: ls -la
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          distribution: 'oracle'
+          distribution: 'adopt'
           java-version: '21'
