@@ -19,4 +19,4 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '21'
-        run: java -version
+      - run: java -version
