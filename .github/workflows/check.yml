@@ -4,6 +4,8 @@ jobs:
   download-project:
     runs-on: ubuntu-latest
     steps:
+      - name: Clean permissions
+        uses: main-quest/actions.clean-permissions@v1.0.4
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check Maven wrapper version
