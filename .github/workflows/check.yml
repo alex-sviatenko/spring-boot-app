@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Maven
-        uses: thermofisher/setup-maven@v1.0.0
+        uses: yuzhiyongcn/setup-maven@v1.0.0
         with:
           maven-version: 3.8.2
       - name: Check Maven wrapper version
