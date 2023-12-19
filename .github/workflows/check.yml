@@ -4,8 +4,6 @@ jobs:
   download-project:
     runs-on: ubuntu-latest
     steps:
-      - name: Get permissions
-        run: git update-index --chmod=+x mvnw
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Maven
