@@ -1,0 +1,24 @@
+# staging configuration
+---
+spring:
+  config:
+    active:
+      on-profile: "staging"
+server:
+  email: staging@mkyong.com
+  cluster:
+    - ip: 192.168.0.110
+      path: /staging1
+    - ip: 192.168.0.111
+      path: /staging2
+    - ip: 192.168.0.112
+      path: /staging3
+  datasource:
+    url: jdbc:postgresql://localhost:5432/staging_db
+    username: postgres
+    password: postgres
+test:
+  bo:
+    url: https://test-jx-staging.jx3.company.uk
+  account:
+    name: 'test-staging'

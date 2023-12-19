@@ -1,0 +1,14 @@
+## Global
+email: global-test@mkyong.com
+thread-pool: 10
+
+## Logging
+logging:
+  level:
+    .: error
+    org.springframework: error
+    org.apache: info
+
+spring:
+  profiles:
+    active: ${env}

@@ -1,0 +1,79 @@
+# production configuration
+---
+spring:
+  config:
+    active:
+      on-profile: "prod"
+server:
+  email: prod@mkyong.com
+  cluster:
+    - ip: 192.168.0.1
+      path: /app1
+    - ip: 192.168.0.2
+      path: /app2
+    - ip: 192.168.0.3
+      path: /app3
+  datasource:
+    url: jdbc:postgresql://localhost:5432/prod_db
+    username: postgres
+    password: postgres
+test:
+  bo:
+    url: https://test-jx-prod.jx3.company.uk
+  account:
+    name: 'test-prod'
+---
+
+## App
+#app:
+#  menus:
+#    - title: Home
+#      name: Home
+#      path: /
+#    - title: Login
+#      name: Login
+#      path: /login
+#  compiler:
+#    timeout: 5
+#    output-folder: /temp/
+#  error: /error/
+
+
+#spring:
+#  application:
+#    name: spring-boot-multi-environment
+#  profiles:
+#    active: @profileActive@
+#
+## development configuration
+#---
+#spring:
+#  config:
+#    active:
+#      on-profile: dev
+#    datasource:
+#      url: jdbc:postgresql://localhost:5432/dev_db
+#      username: postgres
+#      password: postgres
+#
+## staging configuration
+#---
+#spring:
+#  config:
+#    active:
+#      on-profile: staging
+#    datasource:
+#      url: jdbc:postgresql://localhost:5432/staging_db
+#      username: postgres
+#      password: postgres
+#
+## production configuration
+#---
+#spring:
+#  config:
+#    active:
+#      on-profile: production
+#    datasource:
+#      url: jdbc:postgresql://localhost:5432/production_db
+#      username: postgres
+#      password: postgres
