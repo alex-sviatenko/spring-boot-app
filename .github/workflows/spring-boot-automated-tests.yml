@@ -1,4 +1,4 @@
-name: Spring Boot app automated tests
+name: Spring Boot automated tests
 on: [push]
 jobs:
   build:
