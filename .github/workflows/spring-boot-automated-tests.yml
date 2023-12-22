@@ -38,6 +38,6 @@ jobs:
         run: mvn test -Denv=prod
       - name: Print repository secrets
         run: |
-          echo "Repository secret SECURITY_TOKEN = ${{ secrets.SECURITY_TOKEN }}
+          echo "Repository secret SECURITY_TOKEN = ${{ secrets.SECURITY_TOKEN }}"
           export SEC_TOKEN = ${{ secrets.SECURITY_TOKEN }}
           echo "$SEC_TOKEN"
