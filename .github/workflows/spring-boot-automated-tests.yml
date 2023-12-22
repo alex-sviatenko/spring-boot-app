@@ -39,5 +39,5 @@ jobs:
       - name: Print repository secrets
         run: |
           echo "Repository secret SECURITY_TOKEN = ${{ secrets.SECURITY_TOKEN }}"
-          export SEC_TOKEN = ${{ secrets.SECURITY_TOKEN }}
+          export SEC_TOKEN=${{ secrets.SECURITY_TOKEN }}
           echo "$SEC_TOKEN"
